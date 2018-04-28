@@ -11,6 +11,9 @@ services:
     environment: 
       ASPNETCORE_ENVIRONMENT: Development
 
+    links: 
+      - db
+      
     depends_on:
       - db  
     
