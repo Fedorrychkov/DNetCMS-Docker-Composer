@@ -32,8 +32,8 @@ services:
     image: wardef/dnetcms:develop
     restart: always
     
-    ports: 
-      - 80:80
+    # ports: 
+    #   - 80:80
     
     deploy:
       mode: replicated
