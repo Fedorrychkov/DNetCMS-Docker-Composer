@@ -56,27 +56,27 @@ services:
 
 
   #Web host
-  # hots:
-  #   image: nginx
-  #   restart: always
+  hots:
+    image: nginx
+    restart: always
 
-  #   depends_on: 
-  #     - dnetcms
+    depends_on: 
+      - dnetcms
 
-  #   deploy:
-  #     placement:
-  #       constraints:
-  #         - node.role == manager
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
 
-  #   #По хорошему надо бы свой образ, но так быстрее
-  #   volumes: 
-  #     - ./nginx.conf:/etc/nginx/nginx.conf
+    #По хорошему надо бы свой образ, но так быстрее
+    volumes: 
+      - ./nginx.conf:/etc/nginx/nginx.conf
 
-  #   ports: 
-  #     - 80:80
-  #     - 443:443
-  #   links: 
-  #     - dnetcms
+    ports: 
+      - 80:80
+      - 443:443
+    links: 
+      - dnetcms
 
 volumes: 
   dnetdata:
