@@ -32,7 +32,7 @@ services:
     image: wardef/dnetcms:develop
     restart: always
     
-   ports: 
+    ports: 
       - 80:80
     
     deploy:
